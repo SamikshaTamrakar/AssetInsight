@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    overflow-x: auto;
+    height: 100vh;
+}
+
+.table {
+    margin: auto;
+    background: #d0c7c7;
+    width: 100rem;
+}
+
+.theader, .tbody {
+    width: fit-content;
+}
+
+.th,
+.td {
+    background: #e3dcdc !important;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+tr:hover {
+    background-color: #b2b0b0;
+}
+
+.tableDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons {
+    align-content: center;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

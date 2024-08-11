@@ -1,0 +1,13 @@
+button {
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid;
+    margin: 10px;
+    background-color: white;
+    height: 50px;
+    padding: 1rem;
+}
