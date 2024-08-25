@@ -7,7 +7,6 @@ namespace AssetInsight.Server.Data
     {
         public AssetInsightDBContext(DbContextOptions<AssetInsightDBContext> options) : base(options) { }
 
-        public DbSet<Commitment> Commitments { get; set; }
-        public DbSet<Investor> Investors { get; set; }
+        public DbSet<Asset> Asset { get; set; }
     }
 }

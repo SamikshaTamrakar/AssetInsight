@@ -2,25 +2,23 @@ import {useState } from 'react';
 import './App.css';
 import CommitmentItems from './Components/CommitmentTable/Commitment';
 import InvestorItems from './Components/InvestorTable/Investor';
-function App() {
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+function App() {    
     const [refreshCommitment, setCommitment] = useState(false);
 
     const handleCommitmentAdded = () => {
         setCommitment(!refreshCommitment); // Toggle refresh state to trigger re-render
     };
 
-    //const [refreshInvestor, setInvestor] = useState(false);
-
-    //const handleInvestorAdded = () => {
-    //    setInvestor(!refreshInvestor); // Toggle refresh state to trigger re-render
-    //};
-
     return (
-        <div>
-            <CommitmentItems key={refreshCommitment} />
-            {/*<InvestorItems key={refreshInvestor}/>*/}
-            {/*<ProductForm onProductAdded={handleProductAdded} />*/}
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/" element={<CommitmentItems />} />
+                <Route path="/investors/:assetClass" element={<InvestorItems />} />
+            </Routes>
+        </Router>
+        
     );
 }
 

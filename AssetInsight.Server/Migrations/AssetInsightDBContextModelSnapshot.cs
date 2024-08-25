@@ -16,7 +16,7 @@ namespace AssetInsight.Server.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.32");
 
-            modelBuilder.Entity("AssetInsight.Server.Models.Commitment", b =>
+            modelBuilder.Entity("AssetInsight.Server.Models.Asset", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -31,35 +31,27 @@ namespace AssetInsight.Server.Migrations
                     b.Property<string>("Currency")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
-
-                    b.ToTable("Commitments");
-                });
-
-            modelBuilder.Entity("AssetInsight.Server.Models.Investor", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Address")
+                    b.Property<string>("InvestorCountry")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("DateAdded")
+                    b.Property<string>("InvestorDateAdded")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("InvestorLastUpdated")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("InvestorName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("InvestorType")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("TotalCommitment")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Type")
-                        .HasColumnType("TEXT");
-
                     b.HasKey("Id");
 
-                    b.ToTable("Investors");
+                    b.ToTable("Asset");
                 });
 #pragma warning restore 612, 618
         }
